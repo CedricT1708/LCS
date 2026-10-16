@@ -285,5 +285,46 @@ a { color: var(--blue); }
     resize: vertical;
     min-height: 120px;
 }
+/* ---------- Contactsectie (layout) ---------- */
+.contact-section {
+  padding: clamp(3rem, 8vw, 5.5rem) 0;
+  background: var(--bg-alt);
+}
+
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact__info h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+.contact__info p { font-weight: 600; }
+.contact__info p:first-of-type { font-weight: 400; color: var(--grey-soft); }
+.contact__phone { color: inherit; text-decoration: none; }
+
+.btn--full {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+  .contact__wrapper { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (max-width: 720px) {
+  .contact__form-card { padding: 24px; }
+}
 
 
